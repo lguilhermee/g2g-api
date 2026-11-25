@@ -1,0 +1,66 @@
+{
+  "name": "g2g-api",
+  "version": "0.1.0",
+  "description": "Unofficial TypeScript SDK & REST API (v0.1) for G2G.com — Official Seller OpenAPI v2 (HMAC-SHA256), Public Market Scanner, Web Seller Session API (with JWT auto-refresh), Live SendBird Buyer Chat, and Webhook Verification.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    }
+  },
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "g2g",
+    "g2g-api",
+    "g2g-sdk",
+    "g2g-openapi",
+    "g2g-seller",
+    "g2g-chat",
+    "sendbird",
+    "marketplace",
+    "typescript",
+    "nodejs"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lguilhermee/g2g-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lguilhermee/g2g-api/issues"
+  },
+  "homepage": "https://github.com/lguilhermee/g2g-api#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "dev:server": "tsx watch src/server.ts",
+    "start:server": "node dist/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
